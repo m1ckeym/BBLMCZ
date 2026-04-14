@@ -3,13 +3,14 @@ MCZ clone using BBL boards
 
 ![Alt text](boards/images/cagefront.jpg)
 
-The PROM monitor works:
+
+    The PROM monitor works:
     >r
     A  B  C  D  E  F  H  L  I  A' B' C' D' E' F' H' L'  IX   IY   PC   SP  
     FF 00 00 10 00 28 60 00 00 00 F6 F4 DF D9 28 F5 55 E734 129E 0000 D218 
     >
 
-So far it loads the boot sector from track 23 sector 3 into memory:
+    So far it loads the boot sector from track 23 sector 3 into memory:
     >l
     >d 1000 80
     1000 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 *................*
