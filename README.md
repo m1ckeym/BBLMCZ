@@ -32,6 +32,11 @@ MCZ clone using BBL boards
     >L
     INVALID HRDWR. CNTCT ZILOG
 
+    That was the PROM's message, this is the OS boot:
+
+    >OS
+    INVALID HARDWARE. CONTACT ZILOG
+
     
 
 
