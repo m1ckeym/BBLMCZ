@@ -25,5 +25,14 @@ MCZ clone using BBL boards
 
     Now it needs a good boot disk...
 
+    Weeks later:
+
+    BOOTED!
+
+    >L
+    INVALID HRDWR. CNTCT ZILOG
+
+    
+
 
 
