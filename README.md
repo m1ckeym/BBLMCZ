@@ -1,14 +1,46 @@
 # BBLMCZ
-MCZ clone using BBL boards
 
+My goal is to revive a computer that I used in the mid-80's. It was a beast in a 12U box and I couldn't keep
+the power supplies and disk drives, but I was able to save the core circuit boards. Three of the four boards
+came from the BBL System III paging system:
+
+The PC980 Z80 CPU
+![Alt text](boards/images/cpu980.jpg)
+
+The PC964 64K Dynamic RAM
+![Alt text](boards/images/mem64k1.jpg)
+
+The PC964 4-channel SIO
+![Alt text](boards/images/sio.jpg)
+
+
+The fourth card was made custom for the BBL Computer System. It was nearly a direct clone of the Zilog MCZ
+disk controller and monitor PROM:
+
+The PC971 Disk Controller
+![Alt text](boards/images/diskboard1.jpg)
+
+It has a daughter card for the FM data separator. It has a missing chip for an additional hurdle:
+![Alt text](boards/images/diskboard2a.jpg)
+
+
+The four cards in a crude cage:
 ![Alt text](boards/images/cagefront.jpg)
 
+The backplane is wire-wrapped like the original:
+![Alt text](boards/images/cagerear.jpg)
 
-    The PROM monitor works:
+
+
+First milestone was to get the PROM monitor working:
+
     >r
     A  B  C  D  E  F  H  L  I  A' B' C' D' E' F' H' L'  IX   IY   PC   SP  
     FF 00 00 10 00 28 60 00 00 00 F6 F4 DF D9 28 F5 55 E734 129E 0000 D218 
     >
+
+Time passes, figuring out how to get a disk drive connected and how to write it...
+
 
     So far it loads the boot sector from track 23 sector 3 into memory:
     >l
