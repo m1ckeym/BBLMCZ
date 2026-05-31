@@ -6,8 +6,15 @@ import gc
 INDEX_PIN = 2
 MIXED_PIN = 3
 SECTORS = 32
-PULSE_WIDTH_US = 80
-GAP_US = 5208  # Baseline for 360 RPM
+
+#PULSE_WIDTH_US = 80    # was 80
+#GAP_US = 5208  # Baseline for 360 RPM was 5208
+
+#PULSE_WIDTH_US = 90    # but this makes 31 sectors!
+#GAP_US = 5140  # Baseline for 360 RPM was 5208
+
+PULSE_WIDTH_US = 400    # was 80 
+GAP_US = 5100  # Baseline for 360 RPM was 5208
 
 # --- Setup ---
 index_in = Pin(INDEX_PIN, Pin.IN, Pin.PULL_UP)
