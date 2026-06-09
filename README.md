@@ -148,6 +148,18 @@ And I have the original bootloader and CP/M BIOS running!
     A>
 
 
+I wasn't able to get a complete file from the disk but there was this fragment:
     
+    ;**************************************************************
+    ;*
+    ;*     PROCEDURE:      BAUD.ASM
+    ;*     PURPOSE:        TO SET UP THE SERIAL PORT FOR
+    ;*                     1200 BAUD, 1 STOP, ODD PARITY
+    ;*     PROGRAMMER:     CHARLES M. LINK
+    ;*     DATE:           JANUARY 28, 1982
+    ;*     FOR:            BBL INDUSTRIES, INC.
+    ;*
+    ;**************************************************************
+
 
 
