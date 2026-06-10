@@ -112,9 +112,15 @@ Now I can send MCZ image files to it and make a disk:
     HELLO1.COM FROM BLOCK 01H / T03:S10HB
     A>
 
-It's fragile but it works.
+It's fragile but it works, sort of. I wanted the original OS, it should run both CP/M and RIO.
 
-Then I recovered the original CP/M from and old floppy and added some games:
+I have a few boxes of old hard-sector disks. To read them I covered the extra holes with a donor disk
+![Alt text](boards/images/hardway1.jpg)
+![Alt text](boards/images/hardway2.jpg)
+![Alt text](boards/images/hardway3.jpg)
+Ron said to me one time, "Spit sizzles at 150 degrees"
+
+I recovered the original CP/M and added some games:
     
     $ time python3 BBLclient5.py /dev/ttyUSB1 --baud 9600 --tx-char-ms 0 --tx-line-ms 15  --mode companion  --write-disk '/home/mickeym/Downloads/bbl_mcz_cpm_boot_test_v17_adventure_mbasic_startrek.mcz' 
 
