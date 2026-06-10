@@ -20,19 +20,16 @@ disk controller and monitor PROM:
 The PC971 Disk Controller
 ![Alt text](boards/images/diskboard1.jpg)
 
-It has a daughter card for the FM data separator. It has a missing chip for an additional hurdle:
+It has a daughter card for the FM data separator. It has a missing chip for an additional hurdle
 ![Alt text](boards/images/diskboard2a.jpg)
 
-
-The four cards in a crude cage:
+The four cards in a crude cage
 ![Alt text](boards/images/cagefront.jpg)
 
-The backplane is wire-wrapped like the original:
+The backplane is wire-wrapped like the original
 ![Alt text](boards/images/cagerear.jpg)
 
-
-
-First milestone was to get the PROM monitor working:
+First milestone was to get the PROM monitor working
 
     >r
     A  B  C  D  E  F  H  L  I  A' B' C' D' E' F' H' L'  IX   IY   PC   SP  
@@ -40,6 +37,10 @@ First milestone was to get the PROM monitor working:
     >
 
 Time passes, figuring out how to get a disk drive connected and how to write it...
+
+I don't have a working drive that supports hard-sector media, so I made a VSG
+
+![Alt text](boards/images/vsg32.jpg)
 
     I used MCZIMAGER as a base to make BBLIMAGER
     >j 8000
@@ -53,6 +54,10 @@ Time passes, figuring out how to get a disk drive connected and how to write it.
     X S/T/D [TT SS] = WRITE (HEX LINES)  Q=QUIT
 
     BBL>
+
+This is a capture from the 74LS299 latch on the disk controller while writing a track:
+
+![Alt text](boards/images/GoodWriteTrack.png)
 
 So far it loads the boot sector from track 23 sector 3 into memory:
 
@@ -160,6 +165,23 @@ I wasn't able to get a complete file from the disk but there was this fragment:
     ;*     FOR:            BBL INDUSTRIES, INC.
     ;*
     ;**************************************************************
+
+
+
+Then I scraped an old disk with RIO patched for the different console address:
+
+    >OS
+    MEMORY SIZING ERROR AT E010
+    RIO REL 2.2
+    %
+    %CAT MCZIMAGER*
+     FILENAME         DRIVE
+     MCZIMAGER          0    
+     MCZIMAGER.S        0    
+    %PRINT OS.INIT
+    B;
+    %
+
 
 
 
